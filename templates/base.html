@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Display flash messages -->
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div>
+            {% for message in messages %}
+              {{ message }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+      
+      <!-- Main content block -->
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
